@@ -1,0 +1,61 @@
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.5rem 0;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .nav {
+    flex-direction: row;
+    padding: 1.5rem 2rem;
+  }
+}
+
+.brand {
+  font-family: "EB Garamond", serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 30px;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+}
+
+.navList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 768px) {
+  .navList {
+    margin-left: auto;
+  }
+}
+
+.navLink {
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 1.1rem;
+  color: black;
+  letter-spacing: -0.04rem;
+}
+
+.cartContainer {
+  position: absolute;
+  right: 1.5rem;
+  top: 1.8rem;
+}
+
+@media (min-width: 768px) {
+  .cartContainer {
+    position: relative;
+    right: 0;
+    top: 0;
+  }
+}
