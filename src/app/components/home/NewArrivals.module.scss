@@ -1,0 +1,26 @@
+.newArrivalsSection {
+  padding: 3rem 3rem 5rem 3rem;
+  background-color: #ede4d8;
+
+  h2 {
+    line-height: 1;
+  }
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  a {
+    color: #284941;
+    display: flex;
+    flex-direction: column;
+  }
+}

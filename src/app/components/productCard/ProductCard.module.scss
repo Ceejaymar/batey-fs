@@ -1,0 +1,29 @@
+.card {
+  position: relative;
+  flex: 1;
+  /* flex-basis: 1; */
+  text-decoration: none;
+  height: 100%;
+
+  img {
+    position: relative !important;
+    margin-bottom: 0.5rem;
+    /* width: 100%;
+    height: 100%; */
+  }
+
+  div {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+}
+
+.textWhite {
+  color: white;
+}
+
+.textDefault {
+  color: #284941;
+}
