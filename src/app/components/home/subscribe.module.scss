@@ -1,0 +1,78 @@
+.subscribeSection {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 350px;
+  padding: 2rem;
+  background-color: #ede4d8;
+  color: #284941;
+
+  h3 {
+    font-family: "EB Garamond";
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 1;
+    margin-bottom: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    padding: 1rem 2rem;
+    justify-content: space-evenly;
+    gap: 2rem;
+  }
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 3rem;
+
+  @media (min-width: 768px) {
+    margin-top: 2rem;
+  }
+
+  input {
+    padding: 1rem;
+    border: 1px solid #284941;
+    font-size: 1rem;
+  }
+
+  button {
+    color: #ffffff;
+    border: 1px solid #f3a047;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 1rem 1.5rem;
+    background-color: #f3a047;
+    cursor: pointer;
+    transition: all 0.4s;
+
+    &:hover {
+      background-color: #284941;
+      color: white;
+      border-color: #284941;
+    }
+
+    @media (min-width: 600px) {
+      padding: 1rem 2.5rem;
+    }
+  }
+}
+
+.imgContainer {
+  display: none;
+  width: 350px;
+  height: 250px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @media (min-width: 768px) {
+    display: block;
+  }
+}

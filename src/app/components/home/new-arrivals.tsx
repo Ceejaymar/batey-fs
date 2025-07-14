@@ -1,5 +1,5 @@
-import ProductCard from "../productCard/ProductCard";
-import classes from "./NewArrivals.module.scss";
+import ProductCard from "../productCard/product-card";
+import classes from "./new-arrivals.module.scss";
 
 export const products = [
   {

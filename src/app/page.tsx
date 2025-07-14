@@ -1,8 +1,8 @@
-import Header from "./components/home/Header";
-import NewArrivals from "./components/home/NewArrivals";
-// import Quote from '../../components/Quote/Quote';
-// import FeaturedProduct from '../../components/FeaturedProduct/FeaturedProduct';
-// import Subscribe from '../../components/Subscribe/Subscribe';
+import Header from "./components/home/header";
+import NewArrivals from "./components/home/new-arrivals";
+import Quotes from "./components/home/quotes";
+import FeaturedProduct from "./components/home/featured-product";
+import Subscribe from "./components/home/subscribe";
 // import Transition from '../../utils/transition';
 
 export default function Home() {
@@ -11,9 +11,9 @@ export default function Home() {
     <>
       <Header />
       <NewArrivals />
-      {/* <Quote /> */}
-      {/* <FeaturedProduct /> */}
-      {/* <Subscribe /> */}
+      <Quotes />
+      <FeaturedProduct />
+      <Subscribe />
     </>
     // </Transition>
   );

@@ -1,0 +1,66 @@
+.featuredSection {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  align-items: center;
+  padding: 3rem;
+  /* background-image: url(${lcFeatured}); */
+  background-size: cover;
+  background-position: center;
+  border-image: linear-gradient(hsla(0, 0%, 0%, 0.4), hsla(0, 0%, 0%, 0.4)) fill
+    1;
+  color: white;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+
+  @media (min-width: 1024px) {
+    justify-content: space-around;
+  }
+}
+
+.featuredDesc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  height: 75%;
+  max-width: 500px;
+  text-align: center;
+
+  h4 {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: 2rem;
+  }
+}
+
+.productCard {
+  max-width: 300px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.ctaButton {
+  display: inline-block;
+  background-color: transparent;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-style: normal;
+  text-decoration: none;
+  text-transform: capitalize;
+  border: 2px solid white;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: "eb garamond";
+
+  &:hover {
+    background-color: white;
+    color: black;
+  }
+}

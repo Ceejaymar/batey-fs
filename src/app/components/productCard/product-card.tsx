@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import clsx from "clsx";
 
-import classes from "./ProductCard.module.scss";
+import classes from "./product-card.module.scss";
 
 type ProductProps = {
   product: {

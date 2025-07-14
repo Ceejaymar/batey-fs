@@ -4,11 +4,11 @@
   justify-content: center;
   align-items: center;
   padding: 3rem 2rem;
+  background-color: rgba(0, 0, 0, 0.35);
+  background-blend-mode: darken;
   background-image: url("../../../../public/home/fd-garden.webp");
   background-size: cover;
   background-position: center;
-  border-image: linear-gradient(hsla(0, 0%, 0%, 0.3), hsla(0, 0%, 0%, 0.3)) fill
-    1;
   font-family: "eb garamond";
 
   /* span {
