@@ -10,7 +10,7 @@ export default function Lookbook() {
         <div key={index} className={classes.imageWrapper}>
           <Image
             src={product.src}
-            alt="Lookbook product"
+            alt={`Lookbook product ${index + 1}`}
             fill
             sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
             className={classes.image}
