@@ -15,7 +15,7 @@ export const socialLinks = [
   { name: "linkedin", path: "https://www.linkedin.com/in/carmart/" },
 ];
 
-function Footer() {
+export default function Footer() {
   return (
     <section data-testid="footer" className={classes.footerSection}>
       <div className={classes.subscribeContent}>
@@ -54,5 +54,3 @@ function Footer() {
     </section>
   );
 }
-
-export default Footer;

@@ -2,8 +2,6 @@ import Link from "next/link";
 
 import ProductCard from "../productCard/product-card";
 import classes from "./featured-product.module.scss";
-// import lcFeatured from "../../assets/images/home/lc-featured.jpg";
-// import { products } from "../../config/products";
 
 const products = [
   {
