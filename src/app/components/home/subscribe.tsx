@@ -1,6 +1,6 @@
 import classes from "./subscribe.module.scss";
 
-function Subscribe() {
+export default function Subscribe() {
   return (
     <section className={classes.subscribeSection}>
       <div className={classes.imgContainer}>
@@ -20,5 +20,3 @@ function Subscribe() {
     </section>
   );
 }
-
-export default Subscribe;

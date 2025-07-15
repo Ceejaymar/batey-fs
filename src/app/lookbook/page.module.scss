@@ -1,0 +1,26 @@
+.lookbookSection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0;
+  justify-content: space-between;
+  font-size: 2rem;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+
+  @media (min-width: 768px) {
+    width: 50%;
+  }
+
+  @media (min-width: 1024px) {
+    width: 33%;
+  }
+}
+
+.image {
+  object-fit: cover;
+}

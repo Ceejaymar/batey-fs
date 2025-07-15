@@ -2,11 +2,13 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
-    remotePatterns: [{
-      protocol: 'https',
-      hostname: 'firebasestorage.googleapis.com',
-      pathname: '/v0/b/theends.appspot.com/o/**',
-    }],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "los-project-images.s3.us-east-1.amazonaws.com",
+        pathname: "/batey/**",
+      },
+    ],
   },
 };
 

@@ -26,7 +26,7 @@ const products = [
   },
 ];
 
-function FeaturedProduct() {
+export default function FeaturedProduct() {
   return (
     <section className={classes.featuredSection}>
       <div className={classes.featuredDesc}>
@@ -48,5 +48,3 @@ function FeaturedProduct() {
     </section>
   );
 }
-
-export default FeaturedProduct;
