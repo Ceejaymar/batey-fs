@@ -6,16 +6,10 @@
   padding: 3rem 2rem;
   background-color: rgba(0, 0, 0, 0.35);
   background-blend-mode: darken;
-  background-image: url("../../../../public/home/fd-garden.webp");
+  background-image: url("https://los-project-images.s3.us-east-1.amazonaws.com/batey/batey-home-fd-garden.webp");
   background-size: cover;
   background-position: center;
   font-family: "eb garamond";
-
-  /* span {
-    font-style: italic;
-    font-weight: 300;
-    text-shadow: 2px 2px 2px #00000011;
-  } */
 
   @media (min-width: 768px) {
     height: 600px;

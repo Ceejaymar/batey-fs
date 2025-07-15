@@ -2,8 +2,6 @@ import Link from "next/link";
 
 import ProductCard from "../productCard/product-card";
 import classes from "./featured-product.module.scss";
-// import lcFeatured from "../../assets/images/home/lc-featured.jpg";
-// import { products } from "../../config/products";
 
 const products = [
   {
@@ -26,7 +24,7 @@ const products = [
   },
 ];
 
-function FeaturedProduct() {
+export default function FeaturedProduct() {
   return (
     <section className={classes.featuredSection}>
       <div className={classes.featuredDesc}>
@@ -48,5 +46,3 @@ function FeaturedProduct() {
     </section>
   );
 }
-
-export default FeaturedProduct;

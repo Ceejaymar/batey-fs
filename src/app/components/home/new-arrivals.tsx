@@ -170,7 +170,7 @@ export const products = [
   },
 ];
 
-function NewArrivals() {
+export default function NewArrivals() {
   return (
     <section className={classes.newArrivalsSection}>
       <h2>New Arrivals</h2>
@@ -182,5 +182,3 @@ function NewArrivals() {
     </section>
   );
 }
-
-export default NewArrivals;

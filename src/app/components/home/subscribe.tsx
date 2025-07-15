@@ -1,12 +1,13 @@
-// import shirtsOnDisplay from '../../assets/images/home/kh-shirts-display.jpg';
-
 import classes from "./subscribe.module.scss";
 
-function Subscribe() {
+export default function Subscribe() {
   return (
     <section className={classes.subscribeSection}>
       <div className={classes.imgContainer}>
-        {/* <img src={shirtsOnDisplay} alt="Shirts on display" /> */}
+        <img
+          src="https://los-project-images.s3.us-east-1.amazonaws.com/batey/batey-home-kh-shirts-display.webp"
+          alt="Shirts on display"
+        />
       </div>
       <div>
         <h3>Join our community</h3>
@@ -19,5 +20,3 @@ function Subscribe() {
     </section>
   );
 }
-
-export default Subscribe;
