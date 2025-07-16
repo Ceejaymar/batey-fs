@@ -1,23 +1,17 @@
 import { z } from "zod";
 
-const sizes = ["XS", "S", "M", "L", "XL", "XXL"];
+export const sizes = ["XS", "S", "M", "L", "XL", "XXL"] as const;
 
-const SizeEnum = z.enum(sizes);
 export type Size = (typeof sizes)[number];
 
-const StockSchema = z.object(
-  Object.fromEntries(sizes.map((size) => [size, z.number()])) as Record<
-    Size,
-    z.ZodNumber
-  >
-);
+export type Stock = {
+  [key in Size]: number;
+};
 
 export type StockRow = {
   size: Size;
   quantity: number;
 };
-
-export type Stock = z.infer<typeof StockSchema>;
 
 export const ProductSchema = z.object({
   id: z.number(),
@@ -30,5 +24,11 @@ export const ProductSchema = z.object({
 });
 
 export type Product = z.infer<typeof ProductSchema>;
+
+export type RawProduct = Omit<Product, "images" | "colors" | "reviews"> & {
+  images: string;
+  colors: string;
+  reviews: string;
+};
 
 export type ProductId = Product["id"];

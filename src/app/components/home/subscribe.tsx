@@ -1,12 +1,16 @@
+import Image from "next/image";
+
 import classes from "./subscribe.module.scss";
 
 export default function Subscribe() {
   return (
     <section className={classes.subscribeSection}>
       <div className={classes.imgContainer}>
-        <img
+        <Image
           src="https://los-project-images.s3.us-east-1.amazonaws.com/batey/batey-home-kh-shirts-display.webp"
           alt="Shirts on display"
+          width={500}
+          height={500}
         />
       </div>
       <div>

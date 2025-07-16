@@ -5,7 +5,7 @@ import classes from "./featured-product.module.scss";
 
 const products = [
   {
-    productId: 9,
+    id: 9,
     name: "Product 9",
     category: "Category 1",
     price: 200,

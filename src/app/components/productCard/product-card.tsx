@@ -6,7 +6,7 @@ import classes from "./product-card.module.scss";
 
 type ProductProps = {
   product: {
-    productId: number;
+    id: number;
     name: string;
     description: string;
     images: string[];
@@ -22,7 +22,7 @@ export default function ProductCard({ product, textColor }: ProductProps) {
   );
 
   return (
-    <Link className={cardClasses} href={`/product/${product.productId}`}>
+    <Link className={cardClasses} href={`/product/${product.id}`}>
       <div className={classes.imgWrapper}>
         <Image
           src={product.images[0]}

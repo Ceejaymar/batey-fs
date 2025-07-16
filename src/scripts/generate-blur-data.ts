@@ -25,8 +25,9 @@ async function generateBlurData(images: string[], groupName: string) {
 
       result.push({ src, blurDataURL: base64 });
       console.log(`✅ Processed: ${groupName} → ${src}`);
-    } catch (error: any) {
-      console.error(`❌ Error processing ${src}: ${error.message}`);
+    } catch (error: unknown) {
+      const message = error instanceof Error ? error.message : String(error);
+      console.error(`❌ Error processing ${src}: ${message}`);
     }
   }
 
