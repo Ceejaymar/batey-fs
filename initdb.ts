@@ -84,7 +84,6 @@ const products = [
   },
 ];
 
-// create tables (you can wrap these in functions too)
 db.exec(`
   CREATE TABLE IF NOT EXISTS products (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -169,7 +168,6 @@ function insertProduct(product) {
 
   const productId = result.lastInsertRowid;
 
-  // stock
   const insertStock = db.prepare(`
     INSERT INTO stock (product_id, size, quantity)
     VALUES (?, ?, ?)
@@ -178,16 +176,14 @@ function insertProduct(product) {
     insertStock.run(productId, size, quantity);
   }
 
-  // categories
   const insertProdCat = db.prepare(
     `INSERT INTO product_categories (product_id, category_id) VALUES (?, ?)`
   );
-  product.categories.forEach((cat) => {
-    const categoryId = getOrCreateId("categories", cat);
+  product.categories.forEach((category) => {
+    const categoryId = getOrCreateId("categories", category);
     insertProdCat.run(productId, categoryId);
   });
 
-  // tags
   const insertProdTag = db.prepare(
     `INSERT INTO product_tags (product_id, tag_id) VALUES (?, ?)`
   );
@@ -196,14 +192,17 @@ function insertProduct(product) {
     insertProdTag.run(productId, tagId);
   });
 
-  // reviews
   const insertReview = db.prepare(
     `INSERT INTO reviews (product_id, rating, comment, created_at) VALUES (?, ?, ?, ?)`
   );
-  product.reviews.forEach((r) => {
-    insertReview.run(productId, r.rating, r.comment, new Date().toISOString());
+  product.reviews.forEach((review) => {
+    insertReview.run(
+      productId,
+      review.rating,
+      review.comment,
+      new Date().toISOString()
+    );
   });
 }
 
-// run seed
 products.forEach(insertProduct);
