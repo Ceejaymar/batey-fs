@@ -10,7 +10,7 @@ const products = [
     category: "Category 1",
     price: 200,
     images: [
-      "https://firebasestorage.googleapis.com/v0/b/theends.appspot.com/o/Star-3.png?alt=media&token=11bdfccc-6c0c-42b1-bdd3-fdd70c7ab372",
+      "https://los-project-images.s3.us-east-1.amazonaws.com/batey/batey-product-shirt-striped-2.webp",
     ],
     imageAlt: "Image of product 2",
     description: "Description of product 2",
@@ -40,7 +40,7 @@ export default function FeaturedProduct() {
           Shop Now
         </Link>
       </div>
-      <div className={classes.productCard}>
+      <div className={classes.productItem}>
         <ProductCard product={products[0]} textColor="white" />
       </div>
     </section>

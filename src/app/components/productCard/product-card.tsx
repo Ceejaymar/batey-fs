@@ -16,15 +16,22 @@ type ProductProps = {
 };
 
 export default function ProductCard({ product, textColor }: ProductProps) {
-  const cardClass = clsx(
-    classes.card,
+  const cardClasses = clsx(
+    classes.productCard,
     textColor === "white" ? classes.textWhite : classes.textDefault
   );
 
   return (
-    <Link className={cardClass} href={`/product/${product.productId}`}>
-      <Image src={product.images[0]} alt={product.name} fill />
-      <div>
+    <Link className={cardClasses} href={`/product/${product.productId}`}>
+      <div className={classes.imgWrapper}>
+        <Image
+          src={product.images[0]}
+          alt={product.name}
+          fill
+          style={{ objectFit: "cover" }}
+        />
+      </div>
+      <div className={classes.productDetails}>
         <p>{product.name}</p>
         <p>${product.price}</p>
       </div>

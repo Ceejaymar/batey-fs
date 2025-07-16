@@ -1,0 +1,208 @@
+const products = [
+  {
+    slug: "linen-shirt-light-yellow",
+    name: "Linen Shirt Light Yellow",
+    images: [
+      "https://los-project-images.s3.us-east-1.amazonaws.com/batey/batey-product-linen-shirt-light-yellow.webp",
+    ],
+    description: "Linen shirt in light yellow color, perfect for summer.",
+    price: 100,
+    colors: ["light yellow"],
+    stock: { XS: 10, S: 20, M: 30, L: 40, XL: 50, XXL: 60 },
+    categories: ["tops"],
+    reviews: [{ rating: 5, comment: "Great product" }],
+    tags: ["limited edition", "bestseller"],
+  },
+  {
+    slug: "linen-shirt-white",
+    name: "Linen Shirt White",
+    images: [
+      "https://los-project-images.s3.us-east-1.amazonaws.com/batey/batey-product-linen-shirt-white.webp",
+    ],
+    description:
+      "Linen shirt in classic white color, perfect for any occasion.",
+    price: 100,
+    colors: ["white"],
+    stock: { xs: 10, s: 20, m: 30, l: 40, xl: 50, xxl: 60 },
+    categories: ["tops"],
+    reviews: [{ rating: 5, comment: "Great product" }],
+    tags: ["limited edition", "bestseller"],
+  },
+  {
+    slug: "striped-shirt-burgundy",
+    name: "Striped Shirt Burgundy",
+    images: [
+      "https://los-project-images.s3.us-east-1.amazonaws.com/batey/batey-product-shirt-striped-1.webp",
+    ],
+    description:
+      "Linen shirt in classic burgundy color with stripes, perfect for any occasion.",
+    price: 100,
+    colors: ["burgundy", "pink", "white"],
+    stock: { xs: 10, s: 20, m: 30, l: 40, xl: 50, xxl: 60 },
+    categories: ["tops"],
+    reviews: [{ rating: 5, comment: "Great product" }],
+    tags: ["limited edition", "bestseller"],
+  },
+  {
+    slug: "striped-shirt-green",
+    name: "Striped Shirt Green",
+    images: [
+      "https://los-project-images.s3.us-east-1.amazonaws.com/batey/batey-product-shirt-striped-2.webp",
+    ],
+    description:
+      "Linen shirt in classic green color with stripes, perfect for any occasion.",
+    price: 100,
+    colors: ["green", "blue", "white"],
+    stock: { xs: 10, s: 20, m: 30, l: 40, xl: 50, xxl: 60 },
+    categories: ["tops"],
+    reviews: [{ rating: 5, comment: "Great product" }],
+    tags: ["limited edition", "bestseller"],
+  },
+  {
+    slug: "work-shirt-beige",
+    name: "Work Shirt Beige",
+    images: [
+      "https://los-project-images.s3.us-east-1.amazonaws.com/batey/batey-product-work-shirt-beige.webp",
+    ],
+    description: "Work shirt in classic beige color, perfect for any occasion.",
+    price: 100,
+    colors: ["beige"],
+    stock: { xs: 10, s: 20, m: 30, l: 40, xl: 50, xxl: 60 },
+    categories: ["tops"],
+    reviews: [{ rating: 5, comment: "Great product" }],
+    tags: ["limited edition", "bestseller"],
+  },
+  {
+    slug: "work-shirt-mustard",
+    name: "Work Shirt Mustard",
+    images: [
+      "https://los-project-images.s3.us-east-1.amazonaws.com/batey/batey-product-work-shirt-mustard.webp",
+    ],
+    description:
+      "Work shirt in classic mustard color, perfect for any occasion.",
+    price: 100,
+    colors: ["mustard"],
+    stock: { xs: 10, s: 20, m: 30, l: 40, xl: 50, xxl: 60 },
+    categories: ["tops"],
+    reviews: [{ rating: 5, comment: "Great product" }],
+    tags: ["limited edition", "bestseller"],
+  },
+  {
+    slug: "work-shirt-traditional",
+    name: "Work Shirt Traditional",
+    images: [
+      "https://los-project-images.s3.us-east-1.amazonaws.com/batey/batey-product-work-shirt-traditional.webp",
+    ],
+    description: "Work shirt in classic jean color, perfect for any occasion.",
+    price: 100,
+    colors: ["jean"],
+    stock: { xs: 10, s: 20, m: 30, l: 40, xl: 50, xxl: 60 },
+    categories: ["tops"],
+    reviews: [{ rating: 5, comment: "Great product" }],
+    tags: ["limited edition", "bestseller"],
+  },
+  {
+    slug: "linen-cargo-pants-light-brown",
+    name: "Linen Cargo Pants Light Brown",
+    images: [
+      "https://los-project-images.s3.us-east-1.amazonaws.com/batey/batey-product-pants-cargo-linen-light-brown.webp",
+    ],
+    description:
+      "Linen cargo pants in light brown color, perfect for any occasion.",
+    price: 100,
+    colors: ["light brown"],
+    stock: { xs: 10, s: 20, m: 30, l: 40, xl: 50, xxl: 60 },
+    categories: ["bottoms"],
+    reviews: [{ rating: 5, comment: "Great product" }],
+    tags: ["limited edition", "bestseller"],
+  },
+  {
+    slug: "linen-cargo-pants-olive-green",
+    name: "Linen Cargo Pants Olive Green",
+    images: [
+      "https://los-project-images.s3.us-east-1.amazonaws.com/batey/batey-product-pants-cargo-linen-olive-green.webp",
+    ],
+    description:
+      "Linen cargo pants in olive green color, perfect for any occasion.",
+    price: 100,
+    colors: ["olive green"],
+    stock: { xs: 10, s: 20, m: 30, l: 40, xl: 50, xxl: 60 },
+    categories: ["bottoms"],
+    reviews: [{ rating: 5, comment: "Great product" }],
+    tags: ["limited edition", "bestseller"],
+  },
+  {
+    slug: "linen-pants-oat",
+    name: "Linen Pants Oat",
+    images: [
+      "https://los-project-images.s3.us-east-1.amazonaws.com/batey/batey-product-pants-linen-oat.webp",
+    ],
+    description: "Linen pants in oat color, perfect for any occasion.",
+    price: 100,
+    colors: ["oat"],
+    stock: { xs: 10, s: 20, m: 30, l: 40, xl: 50, xxl: 60 },
+    categories: ["bottoms"],
+    reviews: [{ rating: 5, comment: "Great product" }],
+    tags: ["limited edition", "bestseller"],
+  },
+  {
+    slug: "rugged-cargo-pants-olive-green",
+    name: "Rugged Cargo Pants Olive Green",
+    images: [
+      "https://los-project-images.s3.us-east-1.amazonaws.com/batey/batey-product-pants-rugged-cargo-olive-green.webp",
+    ],
+    description:
+      "Rugged cargo pants in olive green color, perfect for any occasion.",
+    price: 100,
+    colors: ["olive green"],
+    stock: { xs: 10, s: 20, m: 30, l: 40, xl: 50, xxl: 60 },
+    categories: ["bottoms"],
+    reviews: [{ rating: 5, comment: "Great product" }],
+    tags: ["limited edition", "bestseller"],
+  },
+  {
+    slug: "pants-jeans-traditional",
+    name: "Traditional Jeans",
+    images: [
+      "https://los-project-images.s3.us-east-1.amazonaws.com/batey/batey-product-pants-jeans-normal.webp",
+    ],
+    description:
+      "Traditional jeans in classic blue color, perfect for any occasion.",
+    price: 100,
+    colors: ["blue"],
+    stock: { xs: 10, s: 20, m: 30, l: 40, xl: 50, xxl: 60 },
+    categories: ["bottoms"],
+    reviews: [{ rating: 5, comment: "Great product" }],
+    tags: ["limited edition", "bestseller"],
+  },
+  {
+    slug: "pants-jeans-light",
+    name: "Light Jeans",
+    images: [
+      "https://los-project-images.s3.us-east-1.amazonaws.com/batey/batey-product-pants-jeans-light.webp",
+    ],
+    description: "Light jeans in a faded blue color, perfect for any occasion.",
+    price: 100,
+    colors: ["light blue"],
+    stock: { xs: 10, s: 20, m: 30, l: 40, xl: 50, xxl: 60 },
+    categories: ["bottoms"],
+    reviews: [{ rating: 5, comment: "Great product" }],
+    tags: ["limited edition", "bestseller"],
+  },
+  {
+    slug: "pants-jeans-dark",
+    name: "Dark Navy Jeans",
+    images: [
+      "https://los-project-images.s3.us-east-1.amazonaws.com/batey/batey-product-pants-jeans-dark.webp",
+    ],
+    description: "Dark navy jeans in a classic fit, perfect for any occasion.",
+    price: 100,
+    colors: ["dark navy"],
+    stock: { xs: 10, s: 20, m: 30, l: 40, xl: 50, xxl: 60 },
+    categories: ["bottoms"],
+    reviews: [{ rating: 5, comment: "Great product" }],
+    tags: ["limited edition", "bestseller"],
+  },
+];
+
+module.exports = { products };
