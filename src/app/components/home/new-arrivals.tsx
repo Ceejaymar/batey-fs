@@ -8,7 +8,7 @@ export const products = [
     category: "Category 1",
     price: 100,
     images: [
-      "https://firebasestorage.googleapis.com/v0/b/theends.appspot.com/o/Star-2.png?alt=media&token=0ca8b1b2-6fc0-45bc-8b6d-8f14172b4d11",
+      "https://los-project-images.s3.us-east-1.amazonaws.com/batey/batey-product-linen-shirt-white.webp",
       "https://firebasestorage.googleapis.com/v0/b/theends.appspot.com/o/Star-1.png?alt=media&token=f1032cfc-28ca-4e69-a181-6dac42dbbb70",
     ],
     imageAlt: "Image of product 1",
@@ -27,7 +27,7 @@ export const products = [
     category: "Category 1",
     price: 200,
     images: [
-      "https://firebasestorage.googleapis.com/v0/b/theends.appspot.com/o/Star-3.png?alt=media&token=11bdfccc-6c0c-42b1-bdd3-fdd70c7ab372",
+      "https://los-project-images.s3.us-east-1.amazonaws.com/batey/batey-product-pants-cargo-linen-light-brown.webp",
     ],
     imageAlt: "Image of product 2",
     description: "Description of product 2",
@@ -45,7 +45,7 @@ export const products = [
     category: "Category 1",
     price: 100,
     images: [
-      "https://firebasestorage.googleapis.com/v0/b/theends.appspot.com/o/Star-2.png?alt=media&token=0ca8b1b2-6fc0-45bc-8b6d-8f14172b4d11",
+      "https://los-project-images.s3.us-east-1.amazonaws.com/batey/batey-product-pants-rugged-cargo-olive-green.webp",
       "https://firebasestorage.googleapis.com/v0/b/theends.appspot.com/o/Star-1.png?alt=media&token=f1032cfc-28ca-4e69-a181-6dac42dbbb70",
     ],
     imageAlt: "Image of product 1",
