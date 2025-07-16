@@ -40,7 +40,7 @@ export default function FeaturedProduct() {
           Shop Now
         </Link>
       </div>
-      <div className={classes.productCard}>
+      <div className={classes.productItem}>
         <ProductCard product={products[0]} textColor="white" />
       </div>
     </section>

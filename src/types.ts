@@ -27,17 +27,6 @@ export const ProductSchema = z.object({
   description: z.string(),
   price: z.number(),
   colors: z.array(z.string()),
-  stock: StockSchema,
-  categories: z.array(z.string()),
-  reviews: z.array(
-    z.object({
-      rating: z.number(),
-      comment: z.string(),
-    })
-  ),
-  tags: z.array(z.string()),
-  restockDate: z.string().nullable(),
-  dateAdded: z.string(),
 });
 
 export type Product = z.infer<typeof ProductSchema>;
