@@ -150,8 +150,8 @@ function getOrCreateId(table, name) {
 
 function insertProduct(product) {
   const insertProductStmt = db.prepare(`
-    INSERT INTO products (slug, name, description, price, restock_date, date_added, images, material, colors)
-    VALUES (@slug, @name, @description, @price, @restockDate, @dateAdded, @images, @material, @colors)
+    INSERT INTO products (slug, name, description, price, restock_date, images, colors)
+    VALUES (@slug, @name, @description, @price, @restockDate, @images, @colors)
   `);
 
   const result = insertProductStmt.run({
@@ -160,9 +160,7 @@ function insertProduct(product) {
     description: product.description,
     price: product.price,
     restockDate: product.restockDate,
-    dateAdded: product.dateAdded,
     images: JSON.stringify(product.images),
-    material: JSON.stringify(product.material),
     colors: JSON.stringify(product.colors),
   });
 
