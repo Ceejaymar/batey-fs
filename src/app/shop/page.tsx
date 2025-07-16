@@ -11,7 +11,7 @@ function Shop() {
       <div className={classes.wrapper}>
         <div className={classes.productsContainer}>
           {products.map((product) => (
-            <div key={product.productId} className={classes.productItem}>
+            <div key={product.id} className={classes.productItem}>
               <ProductCard product={product} />
             </div>
           ))}
