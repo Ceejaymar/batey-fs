@@ -8,7 +8,7 @@ const products = [
     description: "Linen shirt in light yellow color, perfect for summer.",
     price: 100,
     colors: ["light yellow"],
-    stock: { xs: 10, s: 20, m: 30, l: 40, xl: 50, xxl: 60 },
+    stock: { XS: 10, S: 20, M: 30, L: 40, XL: 50, XXL: 60 },
     categories: ["tops"],
     reviews: [{ rating: 5, comment: "Great product" }],
     tags: ["limited edition", "bestseller"],
