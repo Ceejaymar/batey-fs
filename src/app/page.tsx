@@ -1,4 +1,4 @@
-import Header from "./components/home/header";
+import Header from "./components/home/_header";
 import NewArrivals from "./components/home/new-arrivals";
 import Quotes from "./components/home/quotes";
 import FeaturedProduct from "./components/home/featured-product";
