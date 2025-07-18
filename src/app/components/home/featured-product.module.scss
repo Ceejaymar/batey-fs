@@ -58,7 +58,7 @@
   padding: 1rem 2rem;
   cursor: pointer;
   transition: all 0.3s;
-  font-family: "eb garamond";
+  font-family: var(--font-eb-garamond), serif;
 
   &:hover {
     background-color: white;

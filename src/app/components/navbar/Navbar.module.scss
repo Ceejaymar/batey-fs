@@ -15,7 +15,7 @@
 }
 
 .brand {
-  font-family: "EB Garamond", serif;
+  font-family: var(--font-eb-garamond), serif;
   font-size: 2.5rem;
   font-weight: 500;
   line-height: 30px;
@@ -41,9 +41,10 @@
 .navLink {
   text-decoration: none;
   text-transform: capitalize;
+  font-family: var(--font-inter), sans-serif;
   font-size: 1.1rem;
   color: black;
-  letter-spacing: -0.04rem;
+  letter-spacing: -0.03rem;
 }
 
 .cartContainer {
