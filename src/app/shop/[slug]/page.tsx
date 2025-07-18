@@ -4,13 +4,12 @@ import { notFound } from "next/navigation";
 import { getProductBySlug } from "@/lib/products";
 
 type PageProps = {
-  params: {
-    slug: string;
-  };
+  params: Promise<{ slug: string }>;
 };
 
-function Product({ params }: PageProps) {
-  const product = getProductBySlug(params.slug);
+async function Product({ params }: PageProps) {
+  const { slug } = await params;
+  const product = getProductBySlug(slug);
 
   if (!product) {
     notFound();
@@ -31,8 +30,8 @@ function Product({ params }: PageProps) {
       {/* {Object.keys(product.stock).map((key) => {
         return (
           <div key={key} onClick={() => {}}>
-            {key.toLocaleUpperCase()}
-          </>
+            {key.toUpperCase()}
+          </div>
         );
       })} */}
     </>
