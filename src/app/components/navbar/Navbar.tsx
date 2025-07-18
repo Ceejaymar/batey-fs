@@ -19,7 +19,7 @@ export default function Navbar() {
             aria-label="View shopping cart"
             size={24}
             weight="regular"
-            color="blue"
+            color="black"
           />
         </Link>
       </div>
