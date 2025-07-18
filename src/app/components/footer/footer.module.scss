@@ -84,7 +84,7 @@
 }
 
 .footerBrand {
-  font-family: "EB Garamond";
+  font-family: var(--font-eb-garamond), serif;
   font-size: 6rem;
   text-transform: uppercase;
   line-height: 1;

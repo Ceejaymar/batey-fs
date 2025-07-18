@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import ShoppingCartIcon from "../icons/ShoppingCartIcon";
-import classes from "./Navbar.module.css";
+import classes from "./Navbar.module.scss";
 
 const links = [
   // { name: 'Home', path: '/' },

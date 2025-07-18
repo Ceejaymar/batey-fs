@@ -9,7 +9,7 @@
   background-image: url("https://los-project-images.s3.us-east-1.amazonaws.com/batey/batey-home-fd-garden.webp");
   background-size: cover;
   background-position: center;
-  font-family: "eb garamond";
+  font-family: var(--font-eb-garamond), serif;
 
   @media (min-width: 768px) {
     height: 600px;
@@ -45,7 +45,6 @@
   padding: 1rem 2rem;
   cursor: pointer;
   transition: all 0.3s;
-  font-family: "eb garamond";
 
   &:hover {
     background-color: white;
