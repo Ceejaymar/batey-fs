@@ -2,14 +2,7 @@ import Link from "next/link";
 
 import ShoppingCartIcon from "../icons/ShoppingCartIcon";
 import classes from "./Navbar.module.scss";
-
-const links = [
-  // { name: 'Home', path: '/' },
-  { name: "lookbook", path: "/lookbook" },
-  { name: "about", path: "/about" },
-  { name: "contact", path: "/contact" },
-  { name: "shop", path: "/shop" },
-];
+import NavLinks from "./nav-links";
 
 export default function Navbar() {
   return (
@@ -18,13 +11,7 @@ export default function Navbar() {
         <span className={classes.brand}>Batéy</span>
       </Link>
       <ul className={classes.navList}>
-        {links.map((link) => (
-          <li key={link.name}>
-            <Link href={`${link.path}`} className={classes.navLink}>
-              {link.name}
-            </Link>
-          </li>
-        ))}
+        <NavLinks />
       </ul>
       <div className={classes.cartContainer}>
         <Link href="cart">

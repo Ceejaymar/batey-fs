@@ -3,15 +3,10 @@ import Image from "next/image";
 import clsx from "clsx";
 
 import classes from "./product-card.module.scss";
+import { type Product } from "@/types";
 
 type ProductProps = {
-  product: {
-    id: number;
-    name: string;
-    description: string;
-    images: string[];
-    price: number;
-  };
+  product: Product;
   textColor?: "white";
 };
 
@@ -22,7 +17,7 @@ export default function ProductCard({ product, textColor }: ProductProps) {
   );
 
   return (
-    <Link className={cardClasses} href={`/product/${product.id}`}>
+    <Link className={cardClasses} href={`/shop/${product.slug}`}>
       <div className={classes.imgWrapper}>
         <Image
           src={product.images[0]}

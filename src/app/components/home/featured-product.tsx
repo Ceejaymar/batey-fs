@@ -2,29 +2,11 @@ import Link from "next/link";
 
 import ProductCard from "../productCard/product-card";
 import classes from "./featured-product.module.scss";
-
-const products = [
-  {
-    id: 9,
-    name: "Product 9",
-    category: "Category 1",
-    price: 200,
-    images: [
-      "https://los-project-images.s3.us-east-1.amazonaws.com/batey/batey-product-shirt-striped-2.webp",
-    ],
-    imageAlt: "Image of product 2",
-    description: "Description of product 2",
-    stock: { xs: 10, s: 20, m: 30, l: 40, xl: 50, xxl: 60 },
-    restockDate: "2021-01-01",
-    material: ["Material 1", "Material 2"],
-    reviews: [{ reviewId: 1, rating: 5, comment: "Great product" }],
-    dateAdded: "2021-01-01",
-    tags: ["Tag 1", "Tag 2"],
-    color: "black",
-  },
-];
+import { getProductBySlug } from "@/lib/products";
 
 export default function FeaturedProduct() {
+  const product = getProductBySlug("striped-shirt-green");
+
   return (
     <section className={classes.featuredSection}>
       <div className={classes.featuredDesc}>
@@ -41,7 +23,7 @@ export default function FeaturedProduct() {
         </Link>
       </div>
       <div className={classes.productItem}>
-        <ProductCard product={products[0]} textColor="white" />
+        {product && <ProductCard product={product} textColor="white" />}
       </div>
     </section>
   );

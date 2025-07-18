@@ -20,7 +20,6 @@ export function getProductBySlug(slug: string): Product | null {
 
   product.images = JSON.parse(product.images);
   product.colors = JSON.parse(product.colors);
-  product.reviews = JSON.parse(product.reviews);
 
   return ProductSchema.parse(product);
 }
