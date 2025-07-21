@@ -3,10 +3,10 @@ import Image from "next/image";
 import clsx from "clsx";
 
 import classes from "./product-card.module.scss";
-import { type Product } from "@/types";
+import { type BasicProduct } from "@/types";
 
 type ProductProps = {
-  product: Product;
+  product: BasicProduct;
   textColor?: "white";
 };
 
