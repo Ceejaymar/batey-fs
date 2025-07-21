@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "seed": "node initdb.ts",
+    "seed": "tsx initdb.ts",
     "image-blur": "tsx src/scripts/generate-blur-data.ts"
   },
   "dependencies": {

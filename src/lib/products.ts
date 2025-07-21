@@ -36,7 +36,7 @@ export function getProductBySlug(slug: string): Product | null {
     return acc;
   }, {} as Stock);
 
-  const categories = db
+  const product_categories = db
     .prepare(
       `SELECT c.name FROM categories c
         JOIN product_categories pc ON c.id = pc.category_id
@@ -44,15 +44,11 @@ export function getProductBySlug(slug: string): Product | null {
     )
     .all(product.id) as { name: string }[];
 
-  const list = categories.reduce(
-    (arr: string[], category: { name: string }) => {
-      arr.push(category.name);
-      return arr;
-    },
-    []
+  const categories = product_categories.map(
+    (category: { name: string }) => category.name
   );
 
-  product.categories = list;
+  product.categories = categories;
 
   const tags = db
     .prepare(
