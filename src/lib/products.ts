@@ -1,5 +1,11 @@
 import db from "./db";
-import { type Product, type RawProduct, ProductSchema } from "../types";
+import {
+  type Product,
+  type RawProduct,
+  type Stock,
+  type StockRow,
+  ProductSchema,
+} from "../types";
 
 export function getAllProducts() {
   const products = db.prepare(`SELECT * FROM products`).all() as RawProduct[];
@@ -23,14 +29,12 @@ export function getProductBySlug(slug: string): Product | null {
 
   const stock = db
     .prepare(`SELECT size, quantity FROM stock WHERE product_id = ?`)
-    .all(product.id);
+    .all(product.id) as StockRow[];
 
   product.stock = stock.reduce((acc, row) => {
     acc[row.size] = row.quantity;
     return acc;
-  }, {} as Record<string, number>);
-
-  console.log("Product stock:", product.stock);
+  }, {} as Stock);
 
   const categories = db
     .prepare(

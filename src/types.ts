@@ -13,6 +13,11 @@ export type StockRow = {
   quantity: number;
 };
 
+export const StockSchema = z.record(
+  z.enum(sizes),
+  z.number().int().nonnegative()
+);
+
 export const ProductSchema = z.object({
   id: z.number(),
   slug: z.string(),
@@ -23,7 +28,7 @@ export const ProductSchema = z.object({
   colors: z.array(z.string()),
   categories: z.array(z.string()),
   tags: z.array(z.string()),
-  stock: z.record(z.enum(sizes), z.number().int().nonnegative()),
+  stock: StockSchema,
 });
 
 export type Product = z.infer<typeof ProductSchema>;
