@@ -21,6 +21,9 @@ export const ProductSchema = z.object({
   description: z.string(),
   price: z.number(),
   colors: z.array(z.string()),
+  categories: z.array(z.string()),
+  tags: z.array(z.string()),
+  stock: z.record(z.enum(sizes), z.number().int().nonnegative()),
 });
 
 export type Product = z.infer<typeof ProductSchema>;
