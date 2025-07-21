@@ -97,6 +97,7 @@ function insertProduct(product) {
   const insertProdCat = db.prepare(
     `INSERT INTO product_categories (product_id, category_id) VALUES (?, ?)`
   );
+
   product.categories.forEach((category) => {
     const categoryId = getOrCreateId("categories", category);
     insertProdCat.run(productId, categoryId);
@@ -105,6 +106,7 @@ function insertProduct(product) {
   const insertProdTag = db.prepare(
     `INSERT INTO product_tags (product_id, tag_id) VALUES (?, ?)`
   );
+
   product.tags.forEach((tag) => {
     const tagId = getOrCreateId("tags", tag);
     insertProdTag.run(productId, tagId);
@@ -113,6 +115,7 @@ function insertProduct(product) {
   const insertReview = db.prepare(
     `INSERT INTO reviews (product_id, rating, comment, created_at) VALUES (?, ?, ?, ?)`
   );
+
   product.reviews.forEach((review) => {
     insertReview.run(
       productId,
