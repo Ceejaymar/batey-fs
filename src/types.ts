@@ -31,6 +31,14 @@ export const ProductSchema = z.object({
   stock: StockSchema,
 });
 
+export const ProductSchemaBasic = ProductSchema.omit({
+  stock: true,
+  categories: true,
+  tags: true,
+});
+
+export type BasicProduct = z.infer<typeof ProductSchemaBasic>;
+
 export type Product = z.infer<typeof ProductSchema>;
 
 export type RawProduct = Omit<Product, "images" | "colors" | "reviews"> & {

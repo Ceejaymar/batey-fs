@@ -1,10 +1,11 @@
 import db from "./db";
 import {
-  type Product,
   type RawProduct,
   type Stock,
   type StockRow,
+  type Product,
   ProductSchema,
+  ProductSchemaBasic,
 } from "../types";
 
 export function getAllProducts() {
@@ -13,7 +14,7 @@ export function getAllProducts() {
     product.images = JSON.parse(product.images);
     product.colors = JSON.parse(product.colors);
 
-    return ProductSchema.parse(product);
+    return ProductSchemaBasic.parse(product);
   });
 }
 
