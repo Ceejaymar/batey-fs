@@ -45,9 +45,7 @@ export function getProductBySlug(slug: string): Product | null {
     )
     .all(product.id) as { name: string }[];
 
-  const categories = product_categories.map(
-    (category: { name: string }) => category.name
-  );
+  const categories = product_categories.map((category) => category.name);
 
   product.categories = categories;
 
