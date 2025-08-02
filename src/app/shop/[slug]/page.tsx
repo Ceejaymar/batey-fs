@@ -24,10 +24,8 @@ async function Product({ params }: PageProps) {
         <Image
           src={product.images[0]}
           alt={product.name}
-          // fill
           width="750"
           height="500"
-          // style={{ objectFit: "cover" }}
         />
       </div>
       <div className={classes.productDetails}>
