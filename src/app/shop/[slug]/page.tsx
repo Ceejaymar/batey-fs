@@ -12,7 +12,6 @@ type PageProps = {
 async function Product({ params }: PageProps) {
   const { slug } = await params;
   const product = getProductBySlug(slug);
-  console.log("product", product);
 
   if (!product) {
     notFound();
@@ -37,9 +36,9 @@ async function Product({ params }: PageProps) {
           ))}
         </div>
         <h2>{product.name}</h2>
-        <p>{product.description}</p>
         <p>${product.price}</p>
         <Stock stock={product.stock} />
+        <p>{product.description}</p>
       </div>
     </main>
   );
