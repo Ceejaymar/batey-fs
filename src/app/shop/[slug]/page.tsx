@@ -27,6 +27,7 @@ async function Product({ params }: PageProps) {
           alt={product.name}
           width="750"
           height="500"
+          priority
         />
       </div>
       <div className={classes.productDetails}>
@@ -38,13 +39,19 @@ async function Product({ params }: PageProps) {
           ))}
         </div>
         <h2 className={classes.productName}>{product.name}</h2>
-        <p className={classes.productPrice}>${product.price}</p>
+        <span className={classes.productColors}>
+          {product.colors.join(", ")}
+        </span>
+        <span className={classes.productPrice}>${product.price}</span>
         <Stock stock={product.stock} />
-        <div className={classes.buttonContainer}>
-          <Button>Add to cart</Button>
-          <Button variant="secondary" icon={<HeartStraightIcon size={32} />} />
+        <div className={classes.buttonsContainer}>
+          <div className={classes.buttonWrapper__addToCart}>
+            <Button>Add to cart</Button>
+          </div>
+          <div className={classes.buttonWrapper__favorite}>
+            <Button variant="outline" icon={<HeartStraightIcon size={24} />} />
+          </div>
         </div>
-        <div></div>
         <p className={classes.productDesc}>{product.description}</p>
       </div>
     </main>

@@ -35,7 +35,7 @@ export default function Button({
       ) : (
         <>
           {icon && icon}
-          <span>{children}</span>
+          {children && <span>{children}</span>}
         </>
       )}
     </button>
