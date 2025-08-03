@@ -1,4 +1,4 @@
-import { type PropsWithChildren } from "react";
+import { type PropsWithChildren, type ReactNode } from "react";
 import clsx from "clsx";
 
 import classes from "./button.module.scss";
@@ -10,6 +10,7 @@ type Button = PropsWithChildren<{
   className?: string;
   disabled?: boolean;
   isLoading?: boolean;
+  icon?: ReactNode;
 }>;
 
 export default function Button({
@@ -20,6 +21,7 @@ export default function Button({
   className,
   disabled = false,
   isLoading = false,
+  icon,
 }: Button) {
   return (
     <button
@@ -29,9 +31,12 @@ export default function Button({
       className={clsx(classes.button, classes[variant], className)}
     >
       {isLoading ? (
-        <span className={classes.spinner} aria-hidden />
+        <span className={classes.spinner} aria-hidden="true" />
       ) : (
-        <span>{children}</span>
+        <>
+          {icon && icon}
+          <span>{children}</span>
+        </>
       )}
     </button>
   );

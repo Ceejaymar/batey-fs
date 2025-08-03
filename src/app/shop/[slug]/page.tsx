@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import HeartStraightIcon from "@/app/components/icons/heart-icon";
 
 import { getProductBySlug } from "@/lib/products";
 import Stock from "../../components/stock/stock";
@@ -41,7 +42,9 @@ async function Product({ params }: PageProps) {
         <Stock stock={product.stock} />
         <div className={classes.buttonContainer}>
           <Button>Add to cart</Button>
+          <Button variant="secondary" icon={<HeartStraightIcon size={32} />} />
         </div>
+        <div></div>
         <p className={classes.productDesc}>{product.description}</p>
       </div>
     </main>
