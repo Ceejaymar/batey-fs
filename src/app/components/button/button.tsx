@@ -34,7 +34,7 @@ export default function Button({
         <span className={classes.spinner} aria-hidden="true" />
       ) : (
         <>
-          {icon && icon}
+          {icon}
           {children && <span>{children}</span>}
         </>
       )}
