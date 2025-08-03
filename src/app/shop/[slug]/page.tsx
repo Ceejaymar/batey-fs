@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 
 import { getProductBySlug } from "@/lib/products";
 import Stock from "../../components/stock/stock";
+import Button from "@/app/components/button/button";
 import classes from "./page.module.scss";
 
 type PageProps = {
@@ -35,10 +36,13 @@ async function Product({ params }: PageProps) {
             </span>
           ))}
         </div>
-        <h2>{product.name}</h2>
-        <p>${product.price}</p>
+        <h2 className={classes.productName}>{product.name}</h2>
+        <p className={classes.productPrice}>${product.price}</p>
         <Stock stock={product.stock} />
-        <p>{product.description}</p>
+        <div className={classes.buttonContainer}>
+          <Button>Add to cart</Button>
+        </div>
+        <p className={classes.productDesc}>{product.description}</p>
       </div>
     </main>
   );

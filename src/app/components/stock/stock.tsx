@@ -14,7 +14,7 @@ export default function Stock({ stock }: StockProps) {
 
   return (
     <fieldset className={classes.stockWrapper}>
-      <legend className="sr-only">Select a size</legend>
+      <legend className={classes.selectSize}>Select a size</legend>
       {Object.keys(stock).map((size) => {
         const isDisabled = stock[size as Size] === 0;
         return (
