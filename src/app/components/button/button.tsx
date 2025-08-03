@@ -1,4 +1,4 @@
-import { type PropsWithChildren, type ReactNode } from "react";
+import { type PropsWithChildren } from "react";
 import clsx from "clsx";
 
 import classes from "./button.module.scss";
