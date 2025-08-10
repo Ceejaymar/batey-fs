@@ -1,9 +1,15 @@
 .contact {
   display: flex;
-  justify-content: space-between;
-  padding: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
   max-width: 1600px;
   width: 100%;
+
+  @media (min-width: 728px) {
+    padding: 2rem;
+    flex-direction: row;
+  }
 
   @media (min-width: 1280px) {
     padding: 4rem;
@@ -17,11 +23,16 @@
 }
 
 .contactInfo {
-  flex: 2;
+  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 2rem;
   max-width: 500px;
+  margin-bottom: 4rem;
+
+  @media (min-width: 1028px) {
+    flex: 2;
+  }
 
   & p,
   a {
@@ -44,7 +55,6 @@
   h1 {
     font-size: 2rem;
     font-weight: 500;
-    // margin-bottom: 1rem;
     letter-spacing: -1px;
   }
 }
