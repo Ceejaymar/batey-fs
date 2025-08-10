@@ -22,7 +22,7 @@ export default function Form() {
   return (
     <form action={formAction} className={classes.form}>
       {/* Honeypot (should stay empty) */}
-      <div className="hidden">
+      <div style={{ display: "none" }}>
         <label htmlFor="company">Company</label>
         <input id="company" name="company" type="text" autoComplete="off" />
       </div>

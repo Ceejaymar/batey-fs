@@ -1,7 +1,5 @@
 "use server";
 
-// export const runtime = "nodejs"; // ensure Node (not Edge)
-
 import { z } from "zod";
 
 const ContactSchema = z.object({
@@ -97,8 +95,6 @@ export async function submitAction(
     });
 
     if (!resp.ok) {
-      const body = await resp.text();
-
       return {
         ok: false,
         generalError: "Failed to send. Please try again later.",
@@ -108,9 +104,15 @@ export async function submitAction(
 
     return { ok: true };
   } catch (e) {
+    let message = "Failed to send. Please try again later.";
+
+    if (e instanceof Error) {
+      message = e.message;
+    }
+
     return {
       ok: false,
-      generalError: "Failed to send. Please try again later.",
+      generalError: message,
       values: parsed.data,
     };
   }
