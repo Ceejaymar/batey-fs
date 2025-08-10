@@ -5,12 +5,21 @@
   gap: 2rem;
   padding: 1.5rem 0;
   position: relative;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 @media (min-width: 768px) {
   .nav {
     flex-direction: row;
     padding: 1.5rem 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .nav {
+    flex-direction: row;
+    padding: 1.5rem 4rem;
   }
 }
 
