@@ -1,0 +1,21 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  & input,
+  & textarea {
+    border: 1px solid #f3f3f3;
+    display: block;
+    width: 100%;
+    background-color: white;
+    padding: 0.5rem;
+  }
+
+  & label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #333;
+  }
+}
