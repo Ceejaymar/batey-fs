@@ -48,9 +48,6 @@ export async function submitAction(
 ): Promise<State> {
   const data = readForm(formData);
 
-  // Debug once to confirm keys are de-namespaced:
-  console.log("[contact] keys:", Object.keys(data));
-
   const parsed = ContactSchema.safeParse({
     name: data.name ?? "",
     email: data.email ?? "",
@@ -76,7 +73,6 @@ export async function submitAction(
   const to = process.env.CONTACT_TO_EMAIL;
 
   if (!apiKey || !to) {
-    console.error("[contact] Missing envs", { hasKey: !!apiKey, to });
     return {
       ok: false,
       generalError: "Email service not configured.",
@@ -102,7 +98,7 @@ export async function submitAction(
 
     if (!resp.ok) {
       const body = await resp.text();
-      console.error("[contact] Resend error", resp.status, body);
+
       return {
         ok: false,
         generalError: "Failed to send. Please try again later.",
@@ -112,7 +108,6 @@ export async function submitAction(
 
     return { ok: true };
   } catch (e) {
-    console.error("[contact] fetch error", e);
     return {
       ok: false,
       generalError: "Failed to send. Please try again later.",
